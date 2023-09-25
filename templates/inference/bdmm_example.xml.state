@@ -1,0 +1,17 @@
+<itsabeastystatewerein version='2.0' sample='144999'>
+<statenode id='origin'>origin[1 1] (0.0,Infinity): 32.23906190745772 </statenode>
+<statenode id='samplingProportion'>samplingProportion[6 1] (0.0,1.0): 0.08519855595667872 0.08519855595667872 0.08519855595667872 0.2528735632183908 0.2528735632183908 0.2528735632183908 </statenode>
+<statenode id='becomeUninfectiousRate'>becomeUninfectiousRate[6 1] (0.0,Infinity): 0.293410586595772 0.7358793906058595 0.8142386335142242 1.0796038443907099 0.8176395716372155 0.7183635940731024 </statenode>
+<statenode id='R0_base'>R0_base[3 1] (0.0,Infinity): 0.7421770937103607 1.1835155250261824 1.0367623245023458 </statenode>
+<statenode id='lambda_ratio'>lambda_ratio[1 1] (0.0,Infinity): 0.8333749249954038 </statenode>
+<statenode id='r'>r[6 1] (-Infinity,Infinity): 0.0 0.0 0.0 0.0 0.0 0.0 </statenode>
+<statenode id='rateMatrix'>rateMatrix[2 1] (0.0,100.0): 0.04 0.0 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"R0SensScaler","p":0.5107282177562418,"accept":21802,"reject":50677,"acceptFC":19386,"rejectFC":48151,"rejectIv":0,"rejectOp":0},
+{"id":"LambdaRatioScaler","p":0.617047438296379,"accept":7407,"reject":16699,"acceptFC":6109,"rejectFC":16286,"rejectIv":6487,"rejectOp":0},
+{"id":"becomeUninfectiousRateScaler","p":0.4064515756637623,"accept":7852,"reject":16335,"acceptFC":6795,"rejectFC":15722,"rejectIv":0,"rejectOp":0},
+{"id":"updownBD","p":0.7939506434427799,"accept":6397,"reject":17831,"acceptFC":5564,"rejectFC":16985,"rejectIv":0,"rejectOp":0}
+]}
+-->

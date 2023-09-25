@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beast version="2.7" spec="BEASTScript" name="beast" namespace="beastfx.app.seqgen:beast.base.evolution.alignment:beast.base.evolution.tree:beast.base.evolution.sitemodel:substmodels.nucleotide:beast.base.evolution.substitutionmodel:beast.base.evolution.branchratemodel:beast.base.inference.parameter">
+  <data id="alignment" dataType="nucleotide" name="data" spec="Alignment">
+    <sequence value="?" id="3_1.7833386536627938" spec="Sequence" name="sequence" taxon="3_1.7833386536627938" totalcount="4"/>
+    <sequence value="?" id="1_2.173409289309436" spec="Sequence" name="sequence" taxon="1_2.173409289309436" totalcount="4"/>
+    <sequence value="?" id="2_1.8781634354926924" spec="Sequence" name="sequence" taxon="2_1.8781634354926924" totalcount="4"/>
+  </data>
+  <tree adjustTipHeights="false" id="Tree" IsLabelledNewick="true" name="tree" spec="TreeParser" newick="(3_1.7833386536627938:1.2106030388319056,(1_2.173409289309436:1.1493239476166637,2_1.8781634354926924:0.8540780937999202):0.4513497268618839);"/>
+  <run id="seqgen" tree="@Tree" name="run" spec="SequenceSimulator" sequencelength="10" data="@alignment" outputFileName="out">
+    <branchRateModel id="StrictClock" spec="StrictClockModel" name="branchRateModel">
+      <clock.rate value="0.001" spec="RealParameter" name="clock.rate"/>
+    </branchRateModel>
+  </run>
+</beast>

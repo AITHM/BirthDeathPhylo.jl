@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beast version="2.7" spec="BEASTScript" name="beast" namespace="bdmm.evolution.speciation:beast.base.inference:beast.base.evolution.operator:beast.base.evolution.branchratemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.sitemodel:beast.base.evolution.likelihood:beast.base.inference.distribution:bdsky.evolution.speciation:beast.base.evolution.tree:beast.base.inference.parameter:beast.base.evolution.alignment:beast.base.inference:beast.base.evolution.tree.coalescent">
+  <data id="alignment" dataType="nucleotide" name="data" spec="Alignment">
+    <sequence value="TGTGCGATTG" id="Sequence" spec="Sequence" name="sequence" taxon="3_1.7833386536627938"/>
+    <sequence value="TTGGTAGCGG" id="Sequence1" spec="Sequence" name="sequence" taxon="1_2.173409289309436"/>
+    <sequence value="GGTTCCGTGA" id="Sequence2" spec="Sequence" name="sequence" taxon="2_1.8781634354926924"/>
+  </data>
+  <run chainLength="100000" preBurnin="0" id="mcmc" numInitializationAttempts="10" name="run" spec="MCMC" storeEvery="-1" sampleFromPrior="false">
+    <state id="state" spec="State" name="state" storeEvery="-1">
+      <stateNode taxa="@alignment" id="Tree" spec="RandomTree" name="stateNode">
+        <populationModel id="ConstantPopulation" spec="ConstantPopulation" name="populationModel">
+          <popSize value="1.0" spec="RealParameter" name="popSize"/>
+        </populationModel>
+        <trait value="2_1.8781634354926924=1.8781634354926924,1_2.173409289309436=2.173409289309436,3_1.7833386536627938=1.7833386536627938" id="dateTrait" spec="TraitSet" name="trait" traitname="date">
+          <taxa id="taxonSet" spec="TaxonSet" name="taxa" alignment="@alignment"/>
+        </trait>
+      </stateNode>
+      <stateNode value="50.0" id="origin" spec="RealParameter" name="stateNode"/>
+      <stateNode value="2.0 3.0" id="R0" spec="RealParameter" name="stateNode"/>
+      <stateNode value="1.0 5.0" id="R0AmongDemes" spec="RealParameter" name="stateNode"/>
+      <stateNode value="1.0 1.0" id="becomeUninfectiousRate" spec="RealParameter" name="stateNode"/>
+      <stateNode value="1.0 2.0" id="migrationMatrix" spec="RealParameter" name="stateNode"/>
+      <stateNode value="0.0 0.25" id="samplingProportion" spec="RealParameter" name="stateNode"/>
+      <stateNode value="0.5 0.5" id="frequencies" spec="RealParameter" name="stateNode"/>
+      <stateNode value="1.0" id="gammaShape" spec="RealParameter" name="stateNode"/>
+      <stateNode value="0.001" id="clockRate" spec="RealParameter" name="stateNode"/>
+    </state>
+    <distribution id="posterior" spec="CompoundDistribution" name="distribution">
+      <distribution id="prior" spec="CompoundDistribution" name="distribution">
+        <distribution origin="@origin" migrationMatrix="@migrationMatrix" tree="@Tree" spec="BirthDeathMigrationModelUncoloured" R0="@R0" becomeUninfectiousRate="@becomeUninfectiousRate" name="distribution" samplingProportion="@samplingProportion" frequencies="@frequencies" id="bdsky" stateNumber="2" R0AmongDemes="@R0AmongDemes">
+          <tiptypes taxa="@taxonSet" value="2_1.8781634354926924=NOT_SET,1_2.173409289309436=NOT_SET,3_1.7833386536627938=NOT_SET" id="type" spec="TraitSet" name="tiptypes" traitname="type"/>
+        </distribution>
+        <distribution id="originPrior" spec="Prior" name="distribution" x="@origin">
+          <distr spec="Exponential" name="distr">
+            <mean value="50.0" spec="RealParameter" name="mean"/>
+          </distr>
+        </distribution>
+        <distribution id="R0Prior" spec="Prior" name="distribution" x="@R0">
+          <distr spec="Exponential" name="distr">
+            <mean value="2.0" spec="RealParameter" name="mean"/>
+          </distr>
+        </distribution>
+        <distribution id="R0AmongDemesPrior" spec="Prior" name="distribution" x="@R0AmongDemes">
+          <distr spec="Exponential" name="distr">
+            <mean value="3.0" spec="RealParameter" name="mean"/>
+          </distr>
+        </distribution>
+        <distribution id="becomeUninfectiousRatePrior" spec="Prior" name="distribution" x="@becomeUninfectiousRate">
+          <distr spec="Normal" name="distr">
+            <mean value="10.0" spec="RealParameter" name="mean"/>
+            <sigma value="0.1" spec="RealParameter" name="sigma"/>
+          </distr>
+        </distribution>
+        <distribution id="migrationMatrixPrior" spec="Prior" name="distribution" x="@migrationMatrix">
+          <distr spec="Exponential" name="distr">
+            <mean value="1.5" spec="RealParameter" name="mean"/>
+          </distr>
+        </distribution>
+        <distribution id="samplingProportionPrior" spec="Prior" name="distribution" x="@samplingProportion">
+          <distr offset="0.0" spec="Beta" name="distr">
+            <alpha value="2.0" spec="RealParameter" name="alpha"/>
+            <beta value="4.0" spec="RealParameter" name="beta"/>
+          </distr>
+        </distribution>
+        <distribution id="frequenciesPrior" spec="Prior" name="distribution" x="@frequencies">
+          <distr offset="0.0" spec="Beta" name="distr">
+            <alpha value="10.0" spec="RealParameter" name="alpha"/>
+            <beta value="5.0" spec="RealParameter" name="beta"/>
+          </distr>
+        </distribution>
+        <distribution id="gammaShapePrior" spec="Prior" name="distribution" x="@gammaShape">
+          <distr spec="Exponential" name="distr">
+            <mean value="1.0" spec="RealParameter" name="mean"/>
+          </distr>
+        </distribution>
+        <distribution id="clockRatePrior" spec="Prior" name="distribution" x="@clockRate">
+          <distr meanInRealSpace="false" name="distr" spec="LogNormalDistributionModel">
+            <M value="1.0" spec="RealParameter" name="M"/>
+            <S value="2.0" spec="RealParameter" name="S"/>
+          </distr>
+        </distribution>
+      </distribution>
+      <distribution id="likelihood" spec="CompoundDistribution" name="distribution">
+        <distribution id="treeLikelihood" tree="@Tree" name="distribution" spec="TreeLikelihood" data="@alignment">
+          <siteModel id="siteModel" gammaCategoryCount="4" name="siteModel" spec="SiteModel" shape="@gammaShape">
+            <mutationRate value="1.0" spec="RealParameter" name="mutationRate"/>
+            <proportionInvariant value="0.0" spec="RealParameter" name="proportionInvariant"/>
+            <substModel id="JC69" spec="JukesCantor" name="substModel"/>
+          </siteModel>
+          <branchRateModel id="StrictClock" spec="StrictClockModel" name="branchRateModel" clock.rate="@clockRate"/>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator isNarrow="true" weight="1.0" id="Narrow" tree="@Tree" name="operator" spec="Exchange"/>
+    <operator weight="15.0" id="SubtreeSlide" tree="@Tree" name="operator" spec="SubtreeSlide"/>
+    <operator weight="30.0" id="Uniform" tree="@Tree" name="operator" spec="Uniform"/>
+    <operator weight="3.0" id="WilsonBalding" tree="@Tree" name="operator" spec="WilsonBalding"/>
+    <operator scaleFactor="0.75" weight="3.0" id="originScaler" spec="ScaleOperator" name="operator" parameter="@origin"/>
+    <operator scaleFactor="0.75" weight="3.0" id="R0Scaler" spec="ScaleOperator" name="operator" parameter="@R0"/>
+    <operator scaleFactor="0.75" weight="3.0" id="R0AmongDemesScaler" spec="ScaleOperator" name="operator" parameter="@R0AmongDemes"/>
+    <operator scaleFactor="0.75" weight="3.0" id="becomeUninfectiousRateScaler" spec="ScaleOperator" name="operator" parameter="@becomeUninfectiousRate"/>
+    <operator scaleFactor="0.75" weight="3.0" id="migrationMatrixScaler" spec="ScaleOperator" name="operator" parameter="@migrationMatrix"/>
+    <operator scaleFactor="0.75" weight="3.0" id="samplingProportionScaler" spec="ScaleOperator" name="operator" parameter="@samplingProportion"/>
+    <operator scaleFactor="0.75" weight="3.0" id="frequenciesScaler" spec="ScaleOperator" name="operator" parameter="@frequencies"/>
+    <operator scaleFactor="0.75" weight="3.0" id="gammaShapeScaler" spec="ScaleOperator" name="operator" parameter="@gammaShape"/>
+    <operator scaleFactor="0.75" weight="3.0" id="clockRateScaler" spec="ScaleOperator" name="operator" parameter="@clockRate"/>
+    <logger sort="smart" logEvery="5000" name="logger" fileName="upd.log" spec="Logger" ascii="true" model="@posterior" sanitiseHeaders="true">
+      <log idref="posterior"/>
+      <log idref="likelihood"/>
+      <log idref="prior"/>
+      <log idref="treeLikelihood"/>
+      <log idref="origin"/>
+      <log idref="R0"/>
+      <log idref="R0AmongDemes"/>
+      <log idref="becomeUninfectiousRate"/>
+      <log idref="migrationMatrix"/>
+      <log idref="samplingProportion"/>
+      <log idref="frequencies"/>
+      <log idref="gammaShape"/>
+      <log idref="clockRate"/>
+    </logger>
+    <logger id="screenlog" logEvery="1000" name="logger" spec="Logger" ascii="true" sanitiseHeaders="false">
+      <log idref="posterior"/>
+      <log idref="likelihood"/>
+      <log idref="prior"/>
+    </logger>
+    <logger mode="tree" id="treelog" logEvery="5000" name="logger" fileName="upd.trees" spec="Logger" ascii="true" sanitiseHeaders="false">
+      <log idref="Tree"/>
+    </logger>
+  </run>
+</beast>

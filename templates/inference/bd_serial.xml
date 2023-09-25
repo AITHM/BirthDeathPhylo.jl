@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.4:BDSKY v1.5.0" version="2.7">
+
+    <tree spec="beast.base.evolution.tree.TreeParser" id="Tree" IsLabelledNewick="true" adjustTipHeights="false" 
+    newick="((195_1.4977313708242757:0.3951985524209005,(194_1.5468599034811659:0.04989022617484751,((172_2.839777824896831:0.7410248170597069,153_3.214140617589835:1.1153876097527107):0.3238630146042327,((((125_3.6945134822334214:0.8563232184382348,(73_4.205051884799749:0.8741992474872884,62_4.372754498772371:1.0419018614599107):0.49266237351727415):0.401528153479366,102_3.895161992476504:1.4584998821606834):0.02588320759007523,(166_2.922263647893614:0.4601557805158545,((((124_3.699272070694004:0.6784199530326198,((30_4.713356346086684:0.6830328529702232,40_4.601758092387664:0.5714345992712033):0.7111797294149538,144_3.3486535563630317:0.02950979266152487):0.2982916460401226):0.10045934387689304,100_3.924964121286513:1.0045713475020217):0.39027687104163133,(((51_4.5096497667695985:1.144833585589018,((57_4.4452104585777885:0.30850132735775304,53_4.491612708595753:0.3549035773757172):0.3597996012637985,118_3.778636246908043:0.00172671695180604):0.4120933487756564):0.22507255164909523,(((9_4.887973143285845:0.3562116177352035,5_4.92640745976318:0.39464593421253813):1.177619688294067,(83_4.114194758447611:0.5002257160073258,(87_4.075113782233123:0.14149908751415952,(1_4.944639606705563:0.9381064851373733,35_4.677356721968623:0.6708236004004338):0.07291842684922623):0.31964565227867814):0.2598272051837105):0.09171916185449769,(((15_4.82875155162467:0.9901414290645554,(46_4.576771416987203:0.5913722050140637,81_4.130187156547544:0.14478794457440491):0.1467890894130246):0.06436154163825103,((86_4.090059484172884:0.021058026512468686,(47_4.5754689930952654:0.3955821446716623,42_4.598670236377117:0.4187833879535141):0.11088539076318771):0.2269743819809804,99_3.925655898115687:0.08362882243625203):0.06777849475757147):0.1200283852006967,94_3.9967399263661116:0.3425197306449448):0.39179752031909):0.12267904587059153):0.22661783375345523,117_3.7788668949613364:0.8657410991833063):0.3830098930351702):0.020805507668028245,(((140_3.3851613604559114:0.17433745414605495,((110_3.839412945539941:0.12573026311756186,111_3.839279775430096:0.12559709300771704):0.4014397613146037,((((69_4.275289073690172:0.05765426518181549,63_4.354417253062276:0.1367824445539192):0.049157132061633746,21_4.803035381078856:0.6345577046321331):0.3447786095900516,(37_4.628301087582171:0.5236155416109645,14_4.8302221863940655:0.7255366404228587):0.28098647911453556):0.4342793621118779,(105_3.8446330033636618:0.026559959083814366,((25_4.729043845071463:0.6565012140316293,6_4.926263964548056:0.8537213335082221):0.12459743619052732,60_4.374681191439667:0.4267359965903599):0.12987215056945933):0.428653339535054):0.07717678363701808):0.10141901479791882):0.12469246875299733,34_4.6797235131751656:1.5935920756183064):0.34844804303689036,(126_3.694277276665483:0.25022463697868425,((((41_4.601412138493438:0.34482979105500444,26_4.728865841789486:0.47228349435105255):0.5073531374478408,108_3.840552219057955:0.09132300906736246):0.23856802836645885,(54_4.474340780916623:0.034404006879902305,8_4.912190652560578:0.4722538785238575):0.9292755924125866):0.0571590407495588,((24_4.754807263102964:0.5928920232551613,38_4.619901582087049:0.4579863422392467):0.051045494045736106,29_4.720572835615092:0.609703089813026):0.6573676049274915):0.00944950118777621):0.70636924516683):0.22837299944513711):0.04720252769707223):0.051328964652014086):0.40221036606256577,((((176_2.6941449161568713:0.10233187220935269,(70_4.264976450239853:0.43836187044053654,66_4.320050479381992:0.4934358995826753):1.234801535851798):0.20075491833808057,((165_2.9836815802380157:0.31045221501430564,(2_4.944356376439433:0.6137957794979716,(39_4.6156491366974715:0.10649984316090055,(20_4.808042760118076:0.12303260909314861,13_4.836602961138626:0.15159281011369785):0.1758608574883569):0.17858869659510912):1.6573312317177518):0.030695788019917902,((((4_4.92761922264506:0.609208074144088,(44_4.596268216620421:0.03688640465937887,12_4.8366994863848864:0.2773176744238439):0.2409706634600708):0.7426296680304705,22_4.797834868655919:1.2220533881854174):0.05533410825705909,(28_4.728560530706845:0.774387843085877,55_4.466729322791429:0.5125566351704616):0.43372531540752535):0.34066073600951263,((16_4.8286371499117005:1.1346112107645707,68_4.305166368474344:0.6111404293272145):0.35788692255181065,31_4.687108543778963:1.3509695271836435):0.15635238039138954):0.5372530590001374):0.251475451594354):0.15646991500060903,(109_3.840221627827948:1.1303969460917882,((104_3.8512933043739235:0.797218524850591,61_4.3727583976084805:1.318683618085148):0.006254134976485304,145_3.3364275352295194:0.2886068906826722):0.33799596281068744):0.4752364711273307):0.08902079334761881,((163_3.015950579998474:0.6478959613085493,((((64_4.353894797072962:0.2148567120312359,(32_4.686746291367824:0.16287728747053176,23_4.756905557982958:0.2330365540856656):0.38483091885556675):0.25047371946007546,90_4.04463776378254:0.15607339820088972):1.0031641334951646,((160_3.0412627364231923:0.0007855920869555,(((3_4.929768446217779:0.4740042072693944,7_4.926025983567149:0.4702617446187638):0.26256963622940077,(19_4.821780511187451:0.24199195662998907,36_4.628591546162101:0.048802991604638635):0.3865939518384778):0.6197774332834287,11_4.868197640557139:1.2947804711215838):0.5329400250993186):0.1370819834840833,164_2.9874628749257406:0.08406771407358704):0.017994928765667773):0.19434106015949038,(142_3.356819873070891:0.09010869212210393,((129_3.6159212643556122:0.2038251437840506,((10_4.868348094180958:0.8451531723388177,(27_4.728644448207434:0.608193786460343,(18_4.82556344466013:0.44482596541870656,43_4.596358724195533:0.21562124495410995):0.26028681749433247):0.09725573990495029):0.46244116961263915,106_3.8440477516866394:0.28329399945713796):0.14865763165793977):0.10683399798850202,101_3.918081083124447:0.6128189605413872):0.03855094163427264):0.5756520090217916):0.3230045532370709):0.08628794259191741,(114_3.82486611310002:0.9621039952911041,(17_4.828557557405257:1.1001180035114189,74_4.204798905629261:0.47635935173542254):0.8656774360849222):0.5809954417109089):0.13619925883679684):0.13699888059803067):0.23367854343028815):0.27792031592657307):0.3944368589029432):0.7137158369773008,198_0.39485552116813794:0.006038539742063587);"/>
+
+    <map name="Uniform" >beast.base.inference.distribution.Uniform</map>
+
+    <map name="Exponential" >beast.base.inference.distribution.Exponential</map>
+
+    <map name="LogNormal" >beast.base.inference.distribution.LogNormalDistributionModel</map>
+
+    <map name="Normal" >beast.base.inference.distribution.Normal</map>
+
+    <map name="Beta" >beast.base.inference.distribution.Beta</map>
+
+    <map name="Gamma" >beast.base.inference.distribution.Gamma</map>
+
+    <map name="LaplaceDistribution" >beast.base.inference.distribution.LaplaceDistribution</map>
+
+    <map name="prior" >beast.base.inference.distribution.Prior</map>
+
+    <map name="InverseGamma" >beast.base.inference.distribution.InverseGamma</map>
+
+    <map name="OneOnX" >beast.base.inference.distribution.OneOnX</map>
+
+    <run id="mcmc" spec="MCMC" chainLength="10000000">
+        <state id="state" spec="State" storeEvery="5000">
+            <parameter id="origin" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="Infinity">5.0</parameter>
+            <parameter id="samplingProportion" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+            <parameter id="becomeUninfectiousRate" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="Infinity">1.</parameter>
+            <parameter id="reproductiveNumber" spec="parameter.RealParameter" dimension="1" lower="0.0" name="stateNode" upper="Infinity">2.0</parameter>
+        </state>
+
+        <distribution id="posterior" spec="CompoundDistribution">
+            <distribution id="prior" spec="CompoundDistribution">
+                <distribution id="BDSKY_Contemp.t:hcv" spec="bdsky.evolution.speciation.BirthDeathSkylineModel" 
+                becomeUninfectiousRate="@becomeUninfectiousRate" samplingProportion="@samplingProportion" origin="@origin" 
+                reproductiveNumber="@reproductiveNumber" tree="@Tree">
+                    <parameter id="rho" spec="parameter.RealParameter" estimate="false" name="rho">0.0</parameter>
+                </distribution>
+                <!--<prior id="becomeUninfectiousRatePrior" name="distribution" x="@becomeUninfectiousRate">
+                    <LogNormal id="LogNormalDistributionModel.0" name="distr">
+                        <parameter id="RealParameter.16" spec="parameter.RealParameter" estimate="false" name="M">0.0</parameter>
+                        <parameter id="RealParameter.17" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>
+                    </LogNormal>
+                </prior>-->
+                <prior id="originPrior" name="distribution" x="@origin">
+                    <LogNormal id="LogNormalDistributionModel.2" name="distr">
+                        <parameter id="RealParameter.22" spec="parameter.RealParameter" estimate="false" name="M">5.0</parameter>
+                        <parameter id="RealParameter.23" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">0.5</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="reproductiveNumberPrior" name="distribution" x="@reproductiveNumber">
+                    <LogNormal id="LogNormalDistributionModel.1" name="distr">
+                        <parameter id="RealParameter.18" spec="parameter.RealParameter" estimate="false" name="M">0.0</parameter>
+                        <parameter id="RealParameter.19" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="samplingProportionPrior" name="distribution" x="@samplingProportion">
+                    <Beta id="Beta.0" name="distr">
+                    <parameter id="RealParameter.5" spec="parameter.RealParameter" estimate="false" name="alpha">1.0</parameter>
+                    <parameter id="RealParameter.6" spec="parameter.RealParameter" estimate="false" name="beta">1.0</parameter>
+                </Beta>
+                </prior>
+            </distribution>
+        </distribution>
+        <!--<operator id="becomeUninfectiousRateScaler" spec="ScaleOperator" parameter="@becomeUninfectiousRate" weight="2.0"/>-->
+        <operator id="samplingProportionScaler" spec="ScaleOperator" parameter="@samplingProportion" weight="1.0"/>
+        <operator id="reproductiveNumberScaler" spec="ScaleOperator" parameter="@reproductiveNumber" weight="10.0"/>
+        <!--<operator id="updownBD" spec="operator.UpDownOperator" scaleFactor="0.75" weight="2.0">
+            <up idref="reproductiveNumber"/>
+            <down idref="becomeUninfectiousRate"/>
+        </operator>-->
+        <operator id="origScaler" spec="ScaleOperator" parameter="@origin" weight="1.0"/>
+        <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="3000" model="@posterior" sanitiseHeaders="true" sort="smart">
+            <log idref="posterior"/>
+            <log idref="prior"/>
+            <log idref="BDSKY_Contemp.t:hcv"/>
+            <log idref="origin"/>
+            <log idref="samplingProportion"/>
+            <log idref="becomeUninfectiousRate"/>
+            <log idref="reproductiveNumber"/>
+        </logger>
+        <logger id="screenlog" spec="Logger" logEvery="1000">
+            <log idref="posterior"/>
+            <log idref="prior"/>
+        </logger>
+        <operatorschedule id="OperatorSchedule" spec="OperatorSchedule"/>
+    </run>
+
+</beast>

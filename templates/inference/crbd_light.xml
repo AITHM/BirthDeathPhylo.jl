@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood" required="" version="2.6">
+
+
+    <data
+id="SequenceSimulator"
+spec="Alignment"
+name="alignment">
+                        
+                    </data>
+
+
+    
+
+
+    
+
+
+    
+<map name="Uniform" >beast.math.distributions.Uniform</map>
+<map name="Exponential" >beast.math.distributions.Exponential</map>
+<map name="LogNormal" >beast.math.distributions.LogNormalDistributionModel</map>
+<map name="Normal" >beast.math.distributions.Normal</map>
+<map name="Beta" >beast.math.distributions.Beta</map>
+<map name="Gamma" >beast.math.distributions.Gamma</map>
+<map name="LaplaceDistribution" >beast.math.distributions.LaplaceDistribution</map>
+<map name="prior" >beast.math.distributions.Prior</map>
+<map name="InverseGamma" >beast.math.distributions.InverseGamma</map>
+<map name="OneOnX" >beast.math.distributions.OneOnX</map>
+
+
+<run id="mcmc" spec="MCMC" chainLength="10000000">
+    <state id="state" spec="State" storeEvery="5000">
+        <!--
+        <tree id="Tree" spec="beast.evolution.tree.Tree" name="stateNode">
+            <trait id="dateTrait" spec="beast.evolution.tree.TraitSet" traitname="date" value="32_1.6239692847688287=1.6239692847688287,36_1.2192904885957419=1.2192904885957419,29_2.0125692618105724=2.0125692618105724,21_2.6132820872877085=2.6132820872877085,16_3.126881407225271=3.126881407225271,4_4.438014692230045=4.438014692230045,8_4.1798948063726815=4.1798948063726815,9_4.04573999587163=4.04573999587163,5_4.3987294889614885=4.3987294889614885,3_4.551779986020298=4.551779986020298,1_4.604628723331701=4.604628723331701,2_4.554670118998599=4.554670118998599,11_3.9108009067307603=3.9108009067307603,26_2.2948864788728294=2.2948864788728294,25_2.301007862024526=2.301007862024526,10_3.911301333104903=3.911301333104903,7_4.180747560502335=4.180747560502335,23_2.4772306398116486=2.4772306398116486,22_2.487971763221434=2.487971763221434,35_1.2312569286766841=1.2312569286766841">
+                <taxa id="TaxonSet.SequenceSimulator" spec="TaxonSet">
+                    <alignment idref="SequenceSimulator"/>
+                </taxa>
+            </trait>
+            <taxonset idref="TaxonSet.SequenceSimulator"/>
+        </tree>
+        -->
+        <parameter id="clockRate" spec="parameter.RealParameter" name="stateNode">0.001</parameter>
+        <parameter id="gammaShape" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
+        <parameter id="kappa" spec="parameter.RealParameter" lower="0.0" name="stateNode">5.0</parameter>
+        <parameter id="origin" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="Infinity">10.0</parameter>
+        <parameter id="becomeUninfectiousRate" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="Infinity">1.0</parameter>
+        <parameter id="reproductiveNumber" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="Infinity">2.0</parameter>
+        <parameter id="samplingProportion" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+    </state>
+
+    <!--
+    <init id="RandomTree" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@Tree" taxa="@SequenceSimulator">
+        <populationModel id="ConstantPopulation0" spec="ConstantPopulation">
+            <parameter id="randomPopSize" spec="parameter.RealParameter" name="popSize">1.0</parameter>
+        </populationModel>
+    </init>
+    -->
+
+    <distribution id="posterior" spec="util.CompoundDistribution">
+        <distribution id="prior" spec="util.CompoundDistribution">
+            <distribution id="BDSKY_Serial" spec="beast.evolution.speciation.BirthDeathSkylineModel" becomeUninfectiousRate="@becomeUninfectiousRate" origin="@origin" reproductiveNumber="@reproductiveNumber" samplingProportion="@samplingProportion" tree="@Tree"/>
+            <prior id="becomeUninfectiousRatePrior" name="distribution" x="@becomeUninfectiousRate">
+                <!--
+                <LogNormal id="LogNormalDistributionModel.1" name="distr">
+                    <parameter id="RealParameter.5" spec="parameter.RealParameter" estimate="false" name="M">0.0</parameter>
+                    <parameter id="RealParameter.6" spec="parameter.RealParameter" estimate="false" name="S">1.0</parameter>
+                </LogNormal>
+                -->
+            </prior>
+            <prior id="ClockPrior" name="distribution" x="@clockRate">
+                <Exponential id="Exponential.1" name="distr">
+                    <parameter id="RealParameter.11" spec="parameter.RealParameter" estimate="false" name="mean">0.001</parameter>
+                </Exponential>
+            </prior>
+            <prior id="GammaShapePrior" name="distribution" x="@gammaShape">
+                <Exponential id="Exponential.0" name="distr">
+                    <parameter id="RealParameter.0" spec="parameter.RealParameter" estimate="false" name="mean">1.0</parameter>
+                </Exponential>
+            </prior>
+            <prior id="KappaPrior" name="distribution" x="@kappa">
+                <LogNormal id="LogNormalDistributionModel.0" name="distr">
+                    <parameter id="RealParameter.1" spec="parameter.RealParameter" estimate="false" name="M">1.0</parameter>
+                    <parameter id="RealParameter.2" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>
+                </LogNormal>
+            </prior>
+            <prior id="originPrior" name="distribution" x="@origin">
+                <Exponential id="Exponential.3" name="distr">
+                    <parameter id="RealParameter.13" spec="parameter.RealParameter" estimate="false" name="mean">5.0</parameter>
+                </Exponential>
+            </prior>
+            <prior id="reproductiveNumberPrior" name="distribution" x="@reproductiveNumber">
+                <!--
+                <Exponential id="Exponential.2" name="distr">
+                    <parameter id="RealParameter.12" spec="parameter.RealParameter" estimate="false" name="mean">2.0</parameter>
+                </Exponential>
+                -->
+            </prior>
+            <prior id="samplingProportionPrior" name="distribution" x="@samplingProportion">
+                <Beta id="Beta.1" name="distr">
+                    <parameter id="RealParameter.9" spec="parameter.RealParameter" estimate="false" name="alpha">1.0</parameter>
+                    <parameter id="RealParameter.10" spec="parameter.RealParameter" estimate="false" name="beta">1.0</parameter>
+                </Beta>
+            </prior>
+        </distribution>
+        <distribution id="likelihood" spec="util.CompoundDistribution" useThreads="true">
+            <distribution id="treeLikelihood.SequenceSimulator" spec="ThreadedTreeLikelihood" data="@SequenceSimulator" tree="@Tree">
+                <siteModel id="SiteModel" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape">
+                    <parameter id="mutationRate" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
+                    <parameter id="proportionInvariant" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
+                    <substModel id="hky" spec="HKY" kappa="@kappa">
+                        <frequencies id="equalFreqs" spec="Frequencies" data="@SequenceSimulator" estimate="false"/>
+                    </substModel>
+                </siteModel>
+                <branchRateModel id="StrictClock" spec="beast.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate"/>
+            </distribution>
+        </distribution>
+    </distribution>
+
+    <operator id="StrictClockRateScaler" spec="ScaleOperator" parameter="@clockRate" weight="3.0"/>
+
+    <operator id="strictClockUpDownOperator" spec="UpDownOperator" scaleFactor="0.75" weight="3.0">
+        <up idref="clockRate"/>
+        <down idref="Tree"/>
+    </operator>
+
+    <operator id="gammaShapeScaler" spec="ScaleOperator" parameter="@gammaShape" scaleFactor="0.5" weight="0.1"/>
+
+    <operator id="KappaScaler" spec="ScaleOperator" parameter="@kappa" scaleFactor="0.5" weight="0.1"/>
+
+    <operator id="TreeScaler" spec="ScaleOperator" scaleFactor="0.5" tree="@Tree" weight="3.0"/>
+
+    <operator id="TreeRootScaler" spec="ScaleOperator" rootOnly="true" scaleFactor="0.5" tree="@Tree" weight="3.0"/>
+
+    <operator id="UniformOperator" spec="Uniform" tree="@Tree" weight="30.0"/>
+
+    <operator id="SubtreeSlide" spec="SubtreeSlide" tree="@Tree" weight="15.0"/>
+
+    <operator id="Narrow" spec="Exchange" tree="@Tree" weight="15.0"/>
+
+    <operator id="Wide" spec="Exchange" isNarrow="false" tree="@Tree" weight="3.0"/>
+
+    <operator id="WilsonBalding" spec="WilsonBalding" tree="@Tree" weight="3.0"/>
+
+    <operator id="becomeUninfectiousRateScaler" spec="ScaleOperator" parameter="@becomeUninfectiousRate" weight="2.0"/>
+
+    <operator id="reproductiveNumberScaler" spec="ScaleOperator" parameter="@reproductiveNumber" weight="10.0"/>
+
+    <operator id="samplingProportionScaler" spec="ScaleOperator" parameter="@samplingProportion" weight="10.0"/>
+
+    <operator id="updownBD" spec="UpDownOperator" scaleFactor="0.75" weight="2.0">
+        <up idref="reproductiveNumber"/>
+        <down idref="becomeUninfectiousRate"/>
+    </operator>
+
+    <operator id="origScaler" spec="ScaleOperator" parameter="@origin" weight="1.0"/>
+
+    <logger id="tracelog" spec="Logger" fileName="crbd.log" logEvery="1000" model="@posterior" sanitiseHeaders="true" sort="smart">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+        <log idref="treeLikelihood.SequenceSimulator"/>
+        <log id="TreeHeight" spec="beast.evolution.tree.TreeHeightLogger" tree="@Tree"/>
+        <log idref="clockRate"/>
+        <log idref="gammaShape"/>
+        <log idref="kappa"/>
+        <log idref="BDSKY_Serial"/>
+        <log idref="origin"/>
+        <log idref="becomeUninfectiousRate"/>
+        <log idref="reproductiveNumber"/>
+        <log idref="samplingProportion"/>
+    </logger>
+
+    <logger id="screenlog" spec="Logger" logEvery="1000">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+    </logger>
+
+    <logger id="treelog" spec="Logger" fileName="crbd.trees" logEvery="1000" mode="tree">
+        <log id="TreeWithMetaDataLogger" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree"/>
+    </logger>
+
+    <operatorschedule id="OperatorSchedule" spec="OperatorSchedule"/>
+
+</run>
+
+</beast>

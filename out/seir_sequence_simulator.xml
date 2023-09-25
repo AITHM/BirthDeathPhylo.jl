@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beast version="2.0" namespace="beast.evolution.alignment:beast.core:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+
+    <!-- specify the taxa -->
+    <data id="alignment" dataType="nucleotide">
+    <sequence taxon="6_2.785368500478709">?</sequence><sequence taxon="3_4.452485485913075">?</sequence><sequence taxon="1_5.05988940203989">?</sequence><sequence taxon="2_4.9618855612656905">?</sequence><sequence taxon="4_3.3092817768674503">?</sequence></data>
+
+    <!-- specify the tree -->
+    <tree id="tree" spec="beast.util.TreeParser" newick="((6_2.785368500478709:1.7764680235771892,((3_4.452485485913075:1.5289285676880917,1_5.05988940203989:2.1363324838149067):0.5260773156201046,2_4.9618855612656905:2.5644059586608114):1.388579125703359):0.32611028940108433,4_3.3092817768674503:2.6264915893670144);" taxa="@alignment" adjustTipHeights="false"/>
+
+    <!-- configure the Sequence Simulator -->
+    <run spec="beast.app.seqgen.SequenceSimulator" id="seqgen" data="@alignment" tree="@tree" sequencelength="10" outputFileName=".\out\seir_alignment.xml">
+    	<!-- set up site model -->     
+	    <siteModel spec="SiteModel" id="siteModel" gammaCategoryCount="4">
+			<!-- specify gamma shape parameter -->
+			<shape spec="parameter.RealParameter">1.0</shape>
+			<!-- use HKY substitution model -->
+			<substModel spec="HKY" id="hky">
+			    <parameter name="kappa" id="hky.kappa" value="5.0" lower="0.0"/>
+				<frequencies id="freqs" spec="Frequencies">
+				    <data idref="alignment"/>
+				</frequencies>
+			</substModel>
+	    </siteModel>
+
+	    <!-- use a strict clock -->
+        <branchRateModel id="StrictClock" spec="beast.evolution.branchratemodel.StrictClockModel">
+            <parameter dimension="1" estimate="false" id="clockRate" minordimension="1" name="clock.rate" value="0.001"/>
+        </branchRateModel>
+	</run>
+</beast>

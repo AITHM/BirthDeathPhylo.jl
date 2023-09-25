@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.4:BDSKY v1.5.0" version="2.7">
+
+
+    <data spec="Alignment" name="taxa" id="alignment">
+  <sequence id="188_3.9904833436081826" spec="beast.base.evolution.alignment.Sequence" taxon="188_3.9904833436081826" value="-"/>
+  <sequence id="37_12.645607417296235" spec="beast.base.evolution.alignment.Sequence" taxon="37_12.645607417296235" value="-"/>
+  <sequence id="35_12.701772506256097" spec="beast.base.evolution.alignment.Sequence" taxon="35_12.701772506256097" value="-"/>
+  <sequence id="51_12.372421387206979" spec="beast.base.evolution.alignment.Sequence" taxon="51_12.372421387206979" value="-"/>
+  <sequence id="133_9.616080578732745" spec="beast.base.evolution.alignment.Sequence" taxon="133_9.616080578732745" value="-"/>
+  <sequence id="169_6.517573701891713" spec="beast.base.evolution.alignment.Sequence" taxon="169_6.517573701891713" value="-"/>
+  <sequence id="72_11.59160835035375" spec="beast.base.evolution.alignment.Sequence" taxon="72_11.59160835035375" value="-"/>
+  <sequence id="30_12.776961008201575" spec="beast.base.evolution.alignment.Sequence" taxon="30_12.776961008201575" value="-"/>
+  <sequence id="176_5.712557433441975" spec="beast.base.evolution.alignment.Sequence" taxon="176_5.712557433441975" value="-"/>
+  <sequence id="180_5.097687249676406" spec="beast.base.evolution.alignment.Sequence" taxon="180_5.097687249676406" value="-"/>
+  <sequence id="18_13.436081594891096" spec="beast.base.evolution.alignment.Sequence" taxon="18_13.436081594891096" value="-"/>
+  <sequence id="98_10.844613184833156" spec="beast.base.evolution.alignment.Sequence" taxon="98_10.844613184833156" value="-"/>
+  <sequence id="144_9.251816153710651" spec="beast.base.evolution.alignment.Sequence" taxon="144_9.251816153710651" value="-"/>
+  <sequence id="118_10.011017364914045" spec="beast.base.evolution.alignment.Sequence" taxon="118_10.011017364914045" value="-"/>
+  <sequence id="36_12.68221768939623" spec="beast.base.evolution.alignment.Sequence" taxon="36_12.68221768939623" value="-"/>
+  <sequence id="41_12.540867668479066" spec="beast.base.evolution.alignment.Sequence" taxon="41_12.540867668479066" value="-"/>
+  <sequence id="78_11.456682639435236" spec="beast.base.evolution.alignment.Sequence" taxon="78_11.456682639435236" value="-"/>
+  <sequence id="19_13.325929830531551" spec="beast.base.evolution.alignment.Sequence" taxon="19_13.325929830531551" value="-"/>
+  <sequence id="56_12.271956751194741" spec="beast.base.evolution.alignment.Sequence" taxon="56_12.271956751194741" value="-"/>
+  <sequence id="149_8.407790695742863" spec="beast.base.evolution.alignment.Sequence" taxon="149_8.407790695742863" value="-"/>
+  <sequence id="68_11.77598313708446" spec="beast.base.evolution.alignment.Sequence" taxon="68_11.77598313708446" value="-"/>
+  <sequence id="33_12.713368040663807" spec="beast.base.evolution.alignment.Sequence" taxon="33_12.713368040663807" value="-"/>
+  <sequence id="60_12.03059998731168" spec="beast.base.evolution.alignment.Sequence" taxon="60_12.03059998731168" value="-"/>
+  <sequence id="58_12.195356860208802" spec="beast.base.evolution.alignment.Sequence" taxon="58_12.195356860208802" value="-"/>
+  <sequence id="71_11.591758856188314" spec="beast.base.evolution.alignment.Sequence" taxon="71_11.591758856188314" value="-"/>
+  <sequence id="49_12.40021139824622" spec="beast.base.evolution.alignment.Sequence" taxon="49_12.40021139824622" value="-"/>
+  <sequence id="2_14.086867105224648" spec="beast.base.evolution.alignment.Sequence" taxon="2_14.086867105224648" value="-"/>
+  <sequence id="52_12.357474457528241" spec="beast.base.evolution.alignment.Sequence" taxon="52_12.357474457528241" value="-"/>
+  <sequence id="55_12.272459848498318" spec="beast.base.evolution.alignment.Sequence" taxon="55_12.272459848498318" value="-"/>
+  <sequence id="15_13.576558705624109" spec="beast.base.evolution.alignment.Sequence" taxon="15_13.576558705624109" value="-"/>
+  <sequence id="107_10.481048091301592" spec="beast.base.evolution.alignment.Sequence" taxon="107_10.481048091301592" value="-"/>
+  <sequence id="167_6.8454853827924405" spec="beast.base.evolution.alignment.Sequence" taxon="167_6.8454853827924405" value="-"/>
+  <sequence id="7_13.936519561108598" spec="beast.base.evolution.alignment.Sequence" taxon="7_13.936519561108598" value="-"/>
+  <sequence id="32_12.757632479342645" spec="beast.base.evolution.alignment.Sequence" taxon="32_12.757632479342645" value="-"/>
+  <sequence id="16_13.472399154969441" spec="beast.base.evolution.alignment.Sequence" taxon="16_13.472399154969441" value="-"/>
+  <sequence id="17_13.441421303951582" spec="beast.base.evolution.alignment.Sequence" taxon="17_13.441421303951582" value="-"/>
+  <sequence id="119_10.000121280346729" spec="beast.base.evolution.alignment.Sequence" taxon="119_10.000121280346729" value="-"/>
+  <sequence id="20_13.307438387453653" spec="beast.base.evolution.alignment.Sequence" taxon="20_13.307438387453653" value="-"/>
+  <sequence id="131_9.695027042908926" spec="beast.base.evolution.alignment.Sequence" taxon="131_9.695027042908926" value="-"/>
+  <sequence id="134_9.615806622737152" spec="beast.base.evolution.alignment.Sequence" taxon="134_9.615806622737152" value="-"/>
+  <sequence id="65_11.925747179790466" spec="beast.base.evolution.alignment.Sequence" taxon="65_11.925747179790466" value="-"/>
+  <sequence id="10_13.858411540587136" spec="beast.base.evolution.alignment.Sequence" taxon="10_13.858411540587136" value="-"/>
+  <sequence id="34_12.70186980380898" spec="beast.base.evolution.alignment.Sequence" taxon="34_12.70186980380898" value="-"/>
+  <sequence id="5_13.990509470628815" spec="beast.base.evolution.alignment.Sequence" taxon="5_13.990509470628815" value="-"/>
+  <sequence id="40_12.616193373996873" spec="beast.base.evolution.alignment.Sequence" taxon="40_12.616193373996873" value="-"/>
+  <sequence id="48_12.407793688358039" spec="beast.base.evolution.alignment.Sequence" taxon="48_12.407793688358039" value="-"/>
+  <sequence id="123_9.954092364385085" spec="beast.base.evolution.alignment.Sequence" taxon="123_9.954092364385085" value="-"/>
+  <sequence id="138_9.506126777866166" spec="beast.base.evolution.alignment.Sequence" taxon="138_9.506126777866166" value="-"/>
+  <sequence id="153_8.09623336327631" spec="beast.base.evolution.alignment.Sequence" taxon="153_8.09623336327631" value="-"/>
+  <sequence id="181_4.90581212225984" spec="beast.base.evolution.alignment.Sequence" taxon="181_4.90581212225984" value="-"/>
+  <sequence id="110_10.351750674353069" spec="beast.base.evolution.alignment.Sequence" taxon="110_10.351750674353069" value="-"/>
+  <sequence id="77_11.473579346553073" spec="beast.base.evolution.alignment.Sequence" taxon="77_11.473579346553073" value="-"/>
+  <sequence id="54_12.291883562313481" spec="beast.base.evolution.alignment.Sequence" taxon="54_12.291883562313481" value="-"/>
+  <sequence id="42_12.537243543326811" spec="beast.base.evolution.alignment.Sequence" taxon="42_12.537243543326811" value="-"/>
+  <sequence id="3_13.995284801819993" spec="beast.base.evolution.alignment.Sequence" taxon="3_13.995284801819993" value="-"/>
+  <sequence id="80_11.35959763519173" spec="beast.base.evolution.alignment.Sequence" taxon="80_11.35959763519173" value="-"/>
+  <sequence id="46_12.46594859787452" spec="beast.base.evolution.alignment.Sequence" taxon="46_12.46594859787452" value="-"/>
+  <sequence id="117_10.01811311135123" spec="beast.base.evolution.alignment.Sequence" taxon="117_10.01811311135123" value="-"/>
+  <sequence id="122_9.954324639895527" spec="beast.base.evolution.alignment.Sequence" taxon="122_9.954324639895527" value="-"/>
+  <sequence id="38_12.617888989385833" spec="beast.base.evolution.alignment.Sequence" taxon="38_12.617888989385833" value="-"/>
+  <sequence id="4_13.993318900375641" spec="beast.base.evolution.alignment.Sequence" taxon="4_13.993318900375641" value="-"/>
+  <sequence id="24_12.965315516496586" spec="beast.base.evolution.alignment.Sequence" taxon="24_12.965315516496586" value="-"/>
+  <sequence id="79_11.399438735719071" spec="beast.base.evolution.alignment.Sequence" taxon="79_11.399438735719071" value="-"/>
+  <sequence id="27_12.862609030231066" spec="beast.base.evolution.alignment.Sequence" taxon="27_12.862609030231066" value="-"/>
+  <sequence id="11_13.838916181105088" spec="beast.base.evolution.alignment.Sequence" taxon="11_13.838916181105088" value="-"/>
+  <sequence id="12_13.79591111292387" spec="beast.base.evolution.alignment.Sequence" taxon="12_13.79591111292387" value="-"/>
+  <sequence id="70_11.664105737823848" spec="beast.base.evolution.alignment.Sequence" taxon="70_11.664105737823848" value="-"/>
+  <sequence id="59_12.19293671768336" spec="beast.base.evolution.alignment.Sequence" taxon="59_12.19293671768336" value="-"/>
+  <sequence id="81_11.286944812197484" spec="beast.base.evolution.alignment.Sequence" taxon="81_11.286944812197484" value="-"/>
+  <sequence id="43_12.521650900429504" spec="beast.base.evolution.alignment.Sequence" taxon="43_12.521650900429504" value="-"/>
+  <sequence id="152_8.139897656233389" spec="beast.base.evolution.alignment.Sequence" taxon="152_8.139897656233389" value="-"/>
+  <sequence id="39_12.616216956371977" spec="beast.base.evolution.alignment.Sequence" taxon="39_12.616216956371977" value="-"/>
+  <sequence id="31_12.759459329955055" spec="beast.base.evolution.alignment.Sequence" taxon="31_12.759459329955055" value="-"/>
+  <sequence id="140_9.485937180687895" spec="beast.base.evolution.alignment.Sequence" taxon="140_9.485937180687895" value="-"/>
+  <sequence id="57_12.270986198689975" spec="beast.base.evolution.alignment.Sequence" taxon="57_12.270986198689975" value="-"/>
+  <sequence id="13_13.777842504287133" spec="beast.base.evolution.alignment.Sequence" taxon="13_13.777842504287133" value="-"/>
+  <sequence id="23_13.01103878191086" spec="beast.base.evolution.alignment.Sequence" taxon="23_13.01103878191086" value="-"/>
+  <sequence id="29_12.831211699602035" spec="beast.base.evolution.alignment.Sequence" taxon="29_12.831211699602035" value="-"/>
+  <sequence id="22_13.01597219577581" spec="beast.base.evolution.alignment.Sequence" taxon="22_13.01597219577581" value="-"/>
+  <sequence id="64_11.937070943179487" spec="beast.base.evolution.alignment.Sequence" taxon="64_11.937070943179487" value="-"/>
+  <sequence id="26_12.867488630337473" spec="beast.base.evolution.alignment.Sequence" taxon="26_12.867488630337473" value="-"/>
+  <sequence id="109_10.445012415182466" spec="beast.base.evolution.alignment.Sequence" taxon="109_10.445012415182466" value="-"/>
+  <sequence id="6_13.982293130749115" spec="beast.base.evolution.alignment.Sequence" taxon="6_13.982293130749115" value="-"/>
+  <sequence id="1_14.112819898623226" spec="beast.base.evolution.alignment.Sequence" taxon="1_14.112819898623226" value="-"/>
+  <sequence id="102_10.759157727976245" spec="beast.base.evolution.alignment.Sequence" taxon="102_10.759157727976245" value="-"/>
+  <sequence id="21_13.269604064717557" spec="beast.base.evolution.alignment.Sequence" taxon="21_13.269604064717557" value="-"/>
+  <sequence id="63_11.981486455625024" spec="beast.base.evolution.alignment.Sequence" taxon="63_11.981486455625024" value="-"/>
+  <sequence id="25_12.895165010932928" spec="beast.base.evolution.alignment.Sequence" taxon="25_12.895165010932928" value="-"/>
+  <sequence id="75_11.5553868280045" spec="beast.base.evolution.alignment.Sequence" taxon="75_11.5553868280045" value="-"/>
+  <sequence id="44_12.48809212467908" spec="beast.base.evolution.alignment.Sequence" taxon="44_12.48809212467908" value="-"/>
+  <sequence id="8_13.904042979519694" spec="beast.base.evolution.alignment.Sequence" taxon="8_13.904042979519694" value="-"/>
+  <sequence id="45_12.467745887583787" spec="beast.base.evolution.alignment.Sequence" taxon="45_12.467745887583787" value="-"/>
+  <sequence id="88_11.148601984487545" spec="beast.base.evolution.alignment.Sequence" taxon="88_11.148601984487545" value="-"/>
+  <sequence id="53_12.331339014821719" spec="beast.base.evolution.alignment.Sequence" taxon="53_12.331339014821719" value="-"/>
+  <sequence id="14_13.72908923129509" spec="beast.base.evolution.alignment.Sequence" taxon="14_13.72908923129509" value="-"/>
+  <sequence id="9_13.885891962891801" spec="beast.base.evolution.alignment.Sequence" taxon="9_13.885891962891801" value="-"/>
+  <sequence id="186_4.403551620710131" spec="beast.base.evolution.alignment.Sequence" taxon="186_4.403551620710131" value="-"/>
+  <sequence id="183_4.785428491715277" spec="beast.base.evolution.alignment.Sequence" taxon="183_4.785428491715277" value="-"/>
+  <sequence id="196_2.569756013704348" spec="beast.base.evolution.alignment.Sequence" taxon="196_2.569756013704348" value="-"/>
+  <sequence id="194_2.7388048195604555" spec="beast.base.evolution.alignment.Sequence" taxon="194_2.7388048195604555" value="-"/>
+</data>
+
+    <tree IsLabelledNewick="true" spec="beast.base.evolution.tree.TreeParser" newick="(((((188_3.9904833436081826:0.3244914166773123,(((37_12.645607417296235:7.2176622072674625,((35_12.701772506256097:1.8062295287536472,51_12.372421387206979:1.476878409704529):3.019962757838748,133_9.616080578732745:1.7405003590690438):2.4476350096349293):0.2740500156435237,(169_6.517573701891713:0.5087017093180943,(72_11.59160835035375:0.30653906164546996,30_12.776961008201575:1.4918917194932941):5.2761972961346615):0.8549767981883702):0.24975484157492644,176_5.712557433441975:0.8084170806316529):1.238148425879452):0.196172706907924,(180_5.097687249676406:0.31489609433749166,(((18_13.436081594891096:3.436535606170576,98_10.844613184833156:0.8450671961126357):1.0525916474644372,144_9.251816153710651:0.30486181245456834):1.5283955393037125,((118_10.011017364914045:0.4597186575927896,36_12.68221768939623:3.1309189820749754):0.058197911382091405,(41_12.540867668479066:2.8363368921194585,78_11.456682639435236:1.7521518630756283):0.21142998042044425):2.0745419939867933):2.6357676466134556):1.3129719353159683):0.5431312750094106,((((((19_13.325929830531551:1.8469265364971683,56_12.271956751194741:0.7929534571603583):3.5441383045896586,149_8.407790695742863:0.47292570629813824):0.8296942031831325,((68_11.77598313708446:0.9197325646908876,((33_12.713368040663807:1.031425908006275,60_12.03059998731168:0.34865785465414767):0.6640685307133083,58_12.195356860208802:1.1774832582645782):0.16162302955065222):1.4447299801288143,(((71_11.591758856188314:0.780844690262068,((49_12.40021139824622:0.8132261989277669,2_14.086867105224648:2.4998819059061947):0.5027428007685657,(52_12.357474457528241:0.3321404040439422,55_12.272459848498318:0.24712579501401954):0.9410916549344108):0.27332823262364236):0.2917894303909012,15_13.576558705624109:3.0574339700887645):0.46946950410607613,107_10.481048091301592:0.43139285987232334):0.6381346391645106):2.3063498060031655):0.3318358712204095,167_6.8454853827924405:0.07215046775125789):0.25689205517103186,((((7_13.936519561108598:1.5118044029965603,32_12.757632479342645:0.3329173212306067):1.4743169987319789,(16_13.472399154969441:1.096701619996054,17_13.441421303951582:1.065723768978195):1.4252993755933279):1.8295673472159848,(119_10.000121280346729:0.17727638590993067,20_13.307438387453653:3.4845934930168543):0.7020140822727239):0.2500204237045889,131_9.695027042908926:0.8242166544494403):2.354367528589335):0.056963327020653765,(134_9.615806622737152:1.9386685324657948,((65_11.925747179790466:1.9967358304674026,(((10_13.858411540587136:2.2931597631320706,34_12.70186980380898:1.136618026353915):0.3150323109366724,5_13.990509470628815:2.740290004110422):0.6542337442483195,40_12.616193373996873:2.0202076517267997):0.6669743729470099):0.022299198649916363,48_12.407793688358039:2.5010815376848914):2.2295740604017906):1.21765855742186):3.5327915878359613):0.14106416457578064,123_9.954092364385085:7.16846858394733):1.4867173765513164,(((((138_9.506126777866166:1.5252513230078266,153_8.09623336327631:0.11535790841797056):3.3197339662954137,181_4.90581212225984:0.24467063369691378):1.9423628462357505,(((((110_10.351750674353069:0.8169831065141402,((77_11.473579346553073:1.3727835439469143,((54_12.291883562313481:1.102015329387827,(42_12.537243543326811:1.2698739150895832,3_13.995284801819993:2.7279151735827654):0.07750139531157352):0.919243495410516,80_11.35959763519173:1.088972897676591):0.16982893490897943):0.3239393518139675,46_12.46594859787452:2.689092147082329):0.24208888295326325):3.689893599271465,(((117_10.01811311135123:2.3599952543994833,(((122_9.954324639895527:0.7039354625122645,(38_12.617888989385833:2.6298059256582658,4_13.993318900375641:4.005235836648074):0.7376938863443048):1.219991453104976,((24_12.965315516496586:2.0607029000408748,79_11.399438735719071:0.49482611926335984):1.2901464340019775,(27_12.862609030231066:2.091869631402119,((11_13.838916181105088:2.0019230583578924,12_13.79591111292387:1.9589179901766745):0.9621036412608674,(70_11.664105737823848:0.43988777208164187,59_12.19293671768336:0.9687187519411538):0.3493284842558779):0.10415008265738024):1.1562732163752134):1.584068458175448):0.037040775344535426,(81_11.286944812197484:1.8371837928509915,43_12.521650900429504:3.0718898810830115):1.4564040704127423):0.33523909198200386):1.411951624289145,(152_8.139897656233389:0.7467915524502509,39_12.616216956371977:5.223110852588839):1.1469398711205363):0.28740121980859623,((31_12.759459329955055:4.475720570824684,(140_9.485937180687895:1.1503250756326704,57_12.270986198689975:3.935374093634751):0.05187334592485371):0.6858970592188829,(((13_13.777842504287133:0.9156052037845424,23_13.01103878191086:0.14880148140827032):2.389074930084412,((29_12.831211699602035:1.6286380101948463,22_13.01597219577581:1.813398506368621):0.22951046191564473,64_11.937070943179487:0.9640077156879432):0.4999008570733654):0.9888236269749662,26_12.867488630337473:3.3831498868942607):1.8864970435317243):1.6390766870574822):0.11389104428654218):0.1580201359752742,((((109_10.445012415182466:0.4088032032138358,6_13.982293130749115:3.9460839187804844):0.41266281835581076,(1_14.112819898623226:4.379302870564983,(102_10.759157727976245:0.6254817310297938,((21_13.269604064717557:1.3496954754831645,63_11.981486455625024:0.0615778663906319):1.7747094068241598,(25_12.895165010932928:2.1750972588647315,75_11.5553868280045:0.8353190759363027):0.5748685696579638):0.011523185463781616):0.4001589688882081):0.10997063444542299):1.5473076009944045,44_12.48809212467908:4.411853332060664):0.5367988590819239,((((8_13.904042979519694:1.875529529759481,45_12.467745887583787:0.43923243782357346):1.242572400587827,88_11.148601984487545:0.36266093531515864):0.13319271208456662,53_12.331339014821719:1.678590677733899):0.7355413752676512,(14_13.72908923129509:2.636243966050838,9_13.885891962891801:2.793046697647549):1.1756383034240834):2.377767028283677):1.8525861009443023):1.2852392462393754,186_4.403551620710131:0.001937034357316847):0.4120088944279101,183_4.785428491715277:0.7958227997903733):1.2708270495977283):0.4425603261501876,196_2.569756013704348:0.29353769752736003):0.47722609066076327,194_2.7388048195604555:0.939812594044231):0.5000858216297859);" id="Tree" adjustTipHeights="false"/>
+
+    <taxa id="taxonSet" spec="TaxonSet" alignment="@alignment"/>
+
+    <map name="Uniform" >beast.base.inference.distribution.Uniform</map>
+
+    <map name="Exponential" >beast.base.inference.distribution.Exponential</map>
+
+    <map name="LogNormal" >beast.base.inference.distribution.LogNormalDistributionModel</map>
+
+    <map name="Normal" >beast.base.inference.distribution.Normal</map>
+
+    <map name="Beta" >beast.base.inference.distribution.Beta</map>
+
+    <map name="Gamma" >beast.base.inference.distribution.Gamma</map>
+
+    <map name="LaplaceDistribution" >beast.base.inference.distribution.LaplaceDistribution</map>
+
+    <map name="prior" >beast.base.inference.distribution.Prior</map>
+
+    <map name="InverseGamma" >beast.base.inference.distribution.InverseGamma</map>
+
+    <map name="OneOnX" >beast.base.inference.distribution.OneOnX</map>
+
+    <run id="mcmc" spec="MCMC" chainLength="5000000">
+        <state id="state" spec="State" storeEvery="5000">
+            <parameter id="origin" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="Infinity">25.0</parameter>
+            <parameter id="samplingProportion" spec="parameter.RealParameter" dimension="2" lower="0.0" name="stateNode" upper="1.0">1e-16 0.25</parameter>
+            <parameter id="becomeUninfectiousRate" spec="parameter.RealParameter" dimension="2" lower="0.0" name="stateNode" upper="Infinity">1e-16 1.</parameter>
+            <parameter id="R0" spec="parameter.RealParameter" dimension="2" lower="0.0" name="stateNode" upper="Infinity">1e-16 1e-16</parameter>
+            <parameter id="R0AmongDemes" spec="parameter.RealParameter" dimension="2" lower="0.0" name="stateNode" upper="Infinity">0.0 2.0</parameter>
+            <parameter id="frequencies" spec="parameter.RealParameter" dimension="2" lower="0.0" name="stateNode" upper="1.0">0.5 0.5</parameter>
+            <parameter id="activationRate" spec="parameter.RealParameter" dimension="2" lower="0.0" name="stateNode" upper="Infinity">1. 0.</parameter>
+        </state>
+
+        <distribution id="posterior" spec="CompoundDistribution">
+            <distribution id="prior" spec="CompoundDistribution">
+                <distribution id="seir_serial" spec="bdmm.evolution.speciation.BirthDeathMigrationModelUncoloured" 
+                becomeUninfectiousRate="@becomeUninfectiousRate" samplingProportion="@samplingProportion" origin="@origin" 
+                R0="@R0" R0AmongDemes="@R0AmongDemes" frequencies="@frequencies" migrationMatrix="@activationRate" stateNumber="2" tree="@Tree">
+                    <tiptypes id="typeTraitSet" spec="beast.base.evolution.tree.TraitSet" taxa="@taxonSet" traitname="type" value="188_3.9904833436081826=1,37_12.645607417296235=1,35_12.701772506256097=1,51_12.372421387206979=1,133_9.616080578732745=1,169_6.517573701891713=1,72_11.59160835035375=1,30_12.776961008201575=1,176_5.712557433441975=1,180_5.097687249676406=1,18_13.436081594891096=1,98_10.844613184833156=1,144_9.251816153710651=1,118_10.011017364914045=1,36_12.68221768939623=1,41_12.540867668479066=1,78_11.456682639435236=1,19_13.325929830531551=1,56_12.271956751194741=1,149_8.407790695742863=1,68_11.77598313708446=1,33_12.713368040663807=1,60_12.03059998731168=1,58_12.195356860208802=1,71_11.591758856188314=1,49_12.40021139824622=1,2_14.086867105224648=1,52_12.357474457528241=1,55_12.272459848498318=1,15_13.576558705624109=1,107_10.481048091301592=1,167_6.8454853827924405=1,7_13.936519561108598=1,32_12.757632479342645=1,16_13.472399154969441=1,17_13.441421303951582=1,119_10.000121280346729=1,20_13.307438387453653=1,131_9.695027042908926=1,134_9.615806622737152=1,65_11.925747179790466=1,10_13.858411540587136=1,34_12.70186980380898=1,5_13.990509470628815=1,40_12.616193373996873=1,48_12.407793688358039=1,123_9.954092364385085=1,138_9.506126777866166=1,153_8.09623336327631=1,181_4.90581212225984=1,110_10.351750674353069=1,77_11.473579346553073=1,54_12.291883562313481=1,42_12.537243543326811=1,3_13.995284801819993=1,80_11.35959763519173=1,46_12.46594859787452=1,117_10.01811311135123=1,122_9.954324639895527=1,38_12.617888989385833=1,4_13.993318900375641=1,24_12.965315516496586=1,79_11.399438735719071=1,27_12.862609030231066=1,11_13.838916181105088=1,12_13.79591111292387=1,70_11.664105737823848=1,59_12.19293671768336=1,81_11.286944812197484=1,43_12.521650900429504=1,152_8.139897656233389=1,39_12.616216956371977=1,31_12.759459329955055=1,140_9.485937180687895=1,57_12.270986198689975=1,13_13.777842504287133=1,23_13.01103878191086=1,29_12.831211699602035=1,22_13.01597219577581=1,64_11.937070943179487=1,26_12.867488630337473=1,109_10.445012415182466=1,6_13.982293130749115=1,1_14.112819898623226=1,102_10.759157727976245=1,21_13.269604064717557=1,63_11.981486455625024=1,25_12.895165010932928=1,75_11.5553868280045=1,44_12.48809212467908=1,8_13.904042979519694=1,45_12.467745887583787=1,88_11.148601984487545=1,53_12.331339014821719=1,14_13.72908923129509=1,9_13.885891962891801=1,186_4.403551620710131=1,183_4.785428491715277=1,196_2.569756013704348=1,194_2.7388048195604555=1"/>
+                <!--<parameter id="rho" spec="parameter.RealParameter" estimate="false" name="rho">0.0</parameter>-->
+                </distribution>
+                <prior id="R0AmongDemesPrior" name="distribution" x="@R0AmongDemes">
+                    <Exponential id="Exponential.0" name="distr">
+                        <parameter id="RealParameter.0" spec="parameter.RealParameter" lower="0.0" name="mean" upper="0.0">2.0</parameter>
+                    </Exponential>
+                </prior>
+                <prior id="becomeUninfectiousRatePrior" name="distribution" x="@becomeUninfectiousRate">
+                    <Exponential id="Exponential.1" name="distr">
+                        <parameter id="RealParameter.1" spec="parameter.RealParameter" lower="0.0" name="mean" upper="0.0">1.0</parameter>
+                    </Exponential>
+                </prior>
+                <prior id="activationRatePrior" name="distribution" x="@activationRate">
+                    <Exponential id="Exponential.2" name="distr">
+                        <parameter id="RealParameter.2" spec="parameter.RealParameter" lower="0.0" name="mean" upper="0.0">1.0</parameter>
+                    </Exponential>
+                </prior>
+                <prior id="originPrior" name="distribution" x="@origin">
+                    <LogNormal id="LogNormalDistributionModel.2" name="distr">
+                        <parameter id="RealParameter.22" spec="parameter.RealParameter" estimate="false" name="M">5.0</parameter>
+                        <parameter id="RealParameter.23" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">0.5</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="samplingProportionPrior" name="distribution" x="@samplingProportion">
+                    <Beta id="Beta.0" name="distr">
+                    <parameter id="RealParameter.5" spec="parameter.RealParameter" estimate="false" name="alpha">1.0</parameter>
+                    <parameter id="RealParameter.6" spec="parameter.RealParameter" estimate="false" name="beta">1.0</parameter>
+                </Beta>
+                </prior>
+            </distribution>
+        </distribution>
+        <operator id="becomeUninfectiousRateScaler" spec="ScaleOperator" parameter="@becomeUninfectiousRate" weight="2.0">
+            <indicator spec="beast.base.inference.parameter.BooleanParameter" value="false true" estimate="false"/>
+        </operator>
+        <!--<operator id="samplingProportionScaler" spec="ScaleOperator" parameter="@samplingProportion" weight="1.0">
+            <indicator spec="beast.base.inference.parameter.BooleanParameter" value="false true" estimate="false"/>
+        </operator>-->
+        <operator id="activationScaler" spec="ScaleOperator" parameter="@activationRate" weight="1.0">
+            <indicator spec="beast.base.inference.parameter.BooleanParameter" value="true false" estimate="false"/>
+        </operator>
+        <operator id="R0AmongDemesScaler" spec="ScaleOperator" parameter="@R0AmongDemes" weight="10.0">
+            <indicator spec="beast.base.inference.parameter.BooleanParameter" value="false true" estimate="false"/>
+        </operator>
+        <operator id="origScaler" spec="ScaleOperator" parameter="@origin" weight="1.0"/>
+        <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="3000" model="@posterior" sanitiseHeaders="true" sort="smart">
+            <log idref="posterior"/>
+            <!--<log idref="prior"/>-->
+            <log idref="seir_serial"/>
+            <log idref="origin"/>
+            <log idref="samplingProportion"/>
+            <log idref="becomeUninfectiousRate"/>
+            <log idref="R0"/>
+            <log idref="R0AmongDemes"/>
+            <log idref="activationRate"/>
+        </logger>
+        <logger id="screenlog" spec="Logger" logEvery="1000">
+            <log idref="posterior"/>
+            <!--<log idref="prior"/>-->
+            <log idref="R0AmongDemes"/>
+            <log idref="becomeUninfectiousRate"/>
+            <log idref="activationRate"/>
+        </logger>
+        <operatorschedule id="OperatorSchedule" spec="OperatorSchedule"/>
+    </run>
+
+</beast>

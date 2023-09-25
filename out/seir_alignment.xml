@@ -1,0 +1,16 @@
+<data id='SequenceSimulator' spec='beast.evolution.alignment.Alignment'>
+    <sequence id='Sequence' spec='beast.evolution.alignment.Sequence' taxon='6_2.785368500478709' value='GCGCCACATG'/>
+
+    <sequence id='Sequence1' spec='beast.evolution.alignment.Sequence' taxon='3_4.452485485913075' value='GCGCCACATG'/>
+
+    <sequence id='Sequence2' spec='beast.evolution.alignment.Sequence' taxon='1_5.05988940203989' value='GCGCCACATG'/>
+
+    <sequence id='Sequence3' spec='beast.evolution.alignment.Sequence' taxon='2_4.9618855612656905' value='GCGCCACATG'/>
+
+    <sequence id='Sequence4' spec='beast.evolution.alignment.Sequence' taxon='4_3.3092817768674503' value='GCGCCACATG'/>
+
+    <input id='Nucleotide' spec='beast.evolution.datatype.Nucleotide' name='userDataType'/>
+
+</data>
+
+

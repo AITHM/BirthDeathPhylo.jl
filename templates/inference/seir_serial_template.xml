@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.4:BDSKY v1.5.0" version="2.7">
+
+
+    <data id="alignment" spec="Alignment" name="taxa">   
+        <sequence id="Sequence0" spec="beast.base.evolution.alignment.Sequence" taxon="3_0.7415814672661615" value="-"/>
+        <sequence id="Sequence1" spec="beast.base.evolution.alignment.Sequence" taxon="1_1.6467245530494414" value="-"/>
+        <sequence id="Sequence2" spec="beast.base.evolution.alignment.Sequence" taxon="2_0.7624826208996163" value="-"/>
+    </data>
+
+    <tree spec="beast.base.evolution.tree.TreeParser" id="Tree" IsLabelledNewick="true" adjustTipHeights="false" 
+    newick="(3_0.7415814672661615:0.11181262470437481,(1_1.6467245530494414:0.9371892163599723,2_0.7624826208996163:0.05294728421014716):0.07976649412768244);"/>
+
+    <taxa id="taxonSet" spec="TaxonSet" alignment="@alignment"/>
+
+    <map name="Uniform" >beast.base.inference.distribution.Uniform</map>
+
+    <map name="Exponential" >beast.base.inference.distribution.Exponential</map>
+
+    <map name="LogNormal" >beast.base.inference.distribution.LogNormalDistributionModel</map>
+
+    <map name="Normal" >beast.base.inference.distribution.Normal</map>
+
+    <map name="Beta" >beast.base.inference.distribution.Beta</map>
+
+    <map name="Gamma" >beast.base.inference.distribution.Gamma</map>
+
+    <map name="LaplaceDistribution" >beast.base.inference.distribution.LaplaceDistribution</map>
+
+    <map name="prior" >beast.base.inference.distribution.Prior</map>
+
+    <map name="InverseGamma" >beast.base.inference.distribution.InverseGamma</map>
+
+    <map name="OneOnX" >beast.base.inference.distribution.OneOnX</map>
+
+    <run id="mcmc" spec="MCMC" chainLength="100000">
+        <state id="state" spec="State" storeEvery="5000">
+            <parameter id="origin" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="Infinity">5.0</parameter>
+            <parameter id="samplingProportion" spec="parameter.RealParameter" dimension="2" lower="0.0" name="stateNode" upper="1.0">1e-16 0.5</parameter>
+            <parameter id="becomeUninfectiousRate" spec="parameter.RealParameter" dimension="2" lower="0.0" name="stateNode" upper="Infinity">1e-16 1.</parameter>
+            <parameter id="R0" spec="parameter.RealParameter" dimension="2" lower="0.0" name="stateNode" upper="Infinity">1e-16 1e-16</parameter>
+            <parameter id="R0AmongDemes" spec="parameter.RealParameter" dimension="2" lower="0.0" name="stateNode" upper="Infinity">0.0 2.0</parameter>
+            <parameter id="frequencies" spec="parameter.RealParameter" dimension="2" lower="0.0" name="stateNode" upper="1.0">0.5 0.5</parameter>
+        </state>
+
+        <distribution id="posterior" spec="CompoundDistribution">
+            <distribution id="prior" spec="CompoundDistribution">
+                <distribution id="seir_serial" spec="bdmm.evolution.speciation.BirthDeathMigrationModelUncoloured" 
+                becomeUninfectiousRate="@becomeUninfectiousRate" samplingProportion="@samplingProportion" origin="@origin" 
+                R0="@R0" R0AmongDemes="@R0AmongDemes" frequencies="@frequencies" stateNumber="2" tree="@Tree">
+                <tiptypes id="typeTraitSet" spec="beast.base.evolution.tree.TraitSet" taxa="@taxonSet" traitname="type" value="3_0.7415814672661615=1,1_1.6467245530494414=1,2_0.7624826208996163=1"/>
+                <!--<parameter id="rho" spec="parameter.RealParameter" estimate="false" name="rho">0.0</parameter>-->
+                </distribution>
+                <!--<prior id="becomeUninfectiousRatePrior" name="distribution" x="@becomeUninfectiousRate">
+                    <LogNormal id="LogNormalDistributionModel.0" name="distr">
+                        <parameter id="RealParameter.16" spec="parameter.RealParameter" estimate="false" name="M">0.0</parameter>
+                        <parameter id="RealParameter.17" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>
+                    </LogNormal>
+                </prior>-->
+                <prior id="originPrior" name="distribution" x="@origin">
+                    <LogNormal id="LogNormalDistributionModel.2" name="distr">
+                        <parameter id="RealParameter.22" spec="parameter.RealParameter" estimate="false" name="M">5.0</parameter>
+                        <parameter id="RealParameter.23" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">0.5</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="R0Prior" name="distribution" x="@R0">
+                    <LogNormal id="LogNormalDistributionModel.1" name="distr">
+                        <parameter id="RealParameter.18" spec="parameter.RealParameter" estimate="false" name="M">0.0</parameter>
+                        <parameter id="RealParameter.19" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="samplingProportionPrior" name="distribution" x="@samplingProportion">
+                    <Beta id="Beta.0" name="distr">
+                    <parameter id="RealParameter.5" spec="parameter.RealParameter" estimate="false" name="alpha">1.0</parameter>
+                    <parameter id="RealParameter.6" spec="parameter.RealParameter" estimate="false" name="beta">1.0</parameter>
+                </Beta>
+                </prior>
+            </distribution>
+        </distribution>
+        <!--<operator id="becomeUninfectiousRateScaler" spec="ScaleOperator" parameter="@becomeUninfectiousRate" weight="2.0"/>-->
+        <operator id="samplingProportionScaler" spec="ScaleOperator" parameter="@samplingProportion" weight="1.0"/>
+        <operator id="R0Scaler" spec="ScaleOperator" parameter="@R0" weight="10.0"/>
+        <!--<operator id="updownBD" spec="operator.UpDownOperator" scaleFactor="0.75" weight="2.0">
+            <up idref="R0"/>
+            <down idref="becomeUninfectiousRate"/>
+        </operator>-->
+        <operator id="origScaler" spec="ScaleOperator" parameter="@origin" weight="1.0"/>
+        <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="3000" model="@posterior" sanitiseHeaders="true" sort="smart">
+            <log idref="posterior"/>
+            <log idref="prior"/>
+            <log idref="seir_serial"/>
+            <log idref="origin"/>
+            <log idref="samplingProportion"/>
+            <log idref="becomeUninfectiousRate"/>
+            <log idref="R0"/>
+        </logger>
+        <logger id="screenlog" spec="Logger" logEvery="1000">
+            <log idref="posterior"/>
+            <log idref="prior"/>
+        </logger>
+        <operatorschedule id="OperatorSchedule" spec="OperatorSchedule"/>
+    </run>
+
+</beast>
