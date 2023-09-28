@@ -4,7 +4,6 @@ authors = ["jc213439 "]
 version = "0.1.0"
 
 [deps]
-BEASTPlugIns = "966263f4-37ec-4783-9d4f-a971602d30a4"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 DataFramesMeta = "1313f7d8-7da2-5740-9ea0-a2ca25f37964"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"

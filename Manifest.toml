@@ -28,14 +28,6 @@ version = "7.4.11"
 [[deps.Artifacts]]
 uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 
-[[deps.BEASTPlugIns]]
-deps = ["Distributions", "EzXML", "InteractiveUtils", "LightXML", "NewickTree", "Parameters", "XML2_jll"]
-git-tree-sha1 = "7c0ad2ada0d44e57979f443e95fa49c651e8548c"
-repo-rev = "master"
-repo-url = "https://github.com/AITHM/BEASTPlugIns.jl.git"
-uuid = "966263f4-37ec-4783-9d4f-a971602d30a4"
-version = "0.1.0"
-
 [[deps.Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
