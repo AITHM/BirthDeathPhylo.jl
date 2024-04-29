@@ -111,6 +111,13 @@ end
 
 
 
+# Superspreader birth-death model
+function simulate(parms::SSBDParameters; N_max::Union{Float64, Int64}=Inf, S_max::Union{Float64, Int64}=Inf)
+    return simulate(convert(MTBDParameters, parms), N_max=N_max, S_max=S_max)
+end
+
+
+
 # Multi-type birth death model
 
 

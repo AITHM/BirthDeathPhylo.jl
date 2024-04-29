@@ -26,9 +26,32 @@ end
 end
 
 
+@with_kw mutable struct SSBDParameters <: BDParameters
+    N₀::Vector{Int64}       # initial population distribution of each type
+    R₀::Float64             # reproductive number
+    rel_trans::Float64      # transmissibility of subspreaders relative to superspreaders
+    ss_frac::Float64        # population proportion of superspreaders
+    death_rate::Float64     # death rate
+    sampling_rate::Float64  # extinct / ancestral sampling rate
+    t_max::Float64  # maximum simulation time
+end
+
+
 function Base.convert(::Type{MTBDParameters}, parms::CRBDParameters)::MTBDParameters
     @unpack N₀, λ, μ, ψ, ρ₀, r, t_max = parms
     return MTBDParameters(n_types=1, N₀=[N₀], λ=diagm([λ]), μ=[μ], γ=diagm([0.]), ψ=[ψ], ρ₀=[ρ₀], r=[r], t_max=t_max)
+end
+
+
+function Base.convert(::Type{MTBDParameters}, parms::SSBDParameters)::MTBDParameters
+    @unpack N₀, R₀, rel_trans, ss_frac, death_rate, sampling_rate, t_max = parms
+    λ = R₀ * death_rate
+    denom = 1. - (1. - rel_trans) * (1. - ss_frac)
+    λ₁₁ = ss_frac * λ / denom  
+    λ₁₂ = (1. - ss_frac) * λ / denom
+    λ₂₁ = rel_trans * λ₁₁
+    λ₂₂ = rel_trans * λ₁₂
+    return MTBDParameters(n_types=2, N₀=N₀, λ=[λ₁₁ λ₁₂; λ₂₁ λ₂₂], μ=[death_rate, death_rate], γ=zeros(2,2), ψ=[sampling_rate, sampling_rate], ρ₀=[0., 0.], r=[1., 1.], t_max=t_max)
 end
 
 

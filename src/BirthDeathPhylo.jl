@@ -4,6 +4,7 @@ using DataFrames
 using DataFramesMeta
 using Distributions
 using Lazy
+using LinearAlgebra
 # using LightXML
 using NewickTree
 using Parameters
@@ -12,7 +13,7 @@ using RecursiveArrayTools
 using StatsBase
 using UnPack
 
-export BDParameters, CRBDParameters, MTBDParameters, BDProcess, Host, Outbreak, ProcessSummary
+export BDParameters, CRBDParameters, MTBDParameters, SSBDParameters, BDProcess, Host, Outbreak, ProcessSummary
 
 include(".\\utils\\helper.jl")
 include(".\\utils\\structs.jl")
