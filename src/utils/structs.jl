@@ -121,7 +121,7 @@ mutable struct PhyloTree
     height::Float64
     origin::Float64
     tip_labels::Vector{String}
-    nwk::Node
+    nwk::NewickTree.Node
 end
 
 

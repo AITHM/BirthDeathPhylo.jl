@@ -8,6 +8,7 @@ using LinearAlgebra
 # using LightXML
 using NewickTree
 using Parameters
+using Phylo
 using Random
 using RecursiveArrayTools
 using StatsBase

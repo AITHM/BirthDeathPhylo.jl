@@ -262,3 +262,19 @@ function nexus(tree::DataFrame, seqs::Dict{Int, String}, filename::AbstractStrin
     # Close the file
     close(io)
 end
+
+
+
+function make_tree(df::DataFrame)
+    tree = RecursiveTree{OneRoot, String, Dict{String, Any}, Dict{String, Any}, PolytomousBranching, Float64,Dict{String, Any}}()
+    for row in eachrow(df)
+        lab = string(row.id)
+        createnode!(tree, lab)
+        setnodedata!(tree, lab, "t", row.t)
+        setnodedata!(tree, lab, "host", row.host)
+        setnodedata!(tree, lab, "type", row.type)
+        row.left != 0 && createbranch!(tree, lab, string(row.left), df[row.left, :t] - row.t)
+        row.right != 0 && createbranch!(tree, lab, string(row.right), df[row.right, :t] - row.t)
+    end
+    return tree
+end
